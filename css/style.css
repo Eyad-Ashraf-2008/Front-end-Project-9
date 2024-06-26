@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Inter;
+    src: url(../font/Inter/Inter.ttf);
+}
+
+@font-face {
+    font-family: Lexend_Deca;
+    src: url(../font/Lexend_Deca/LexendDeca-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+}
+
+.container {
+    width: 750px;
+    height: 300px;
+    background-color: hsl(244, 38%, 16%);
+    box-shadow: 0 0 20px #000;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .image {
+    width: 50%;
+    min-height: 100%;
+    order: 1;
+    position: relative;
+}
+
+.container .image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container .image .opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 100%, 50%);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.container .info {
+    position: relative;
+    width: 50%;
+    min-height: 100%;
+    padding: 40px;
+    order: 0;
+}
+
+.container .info .head h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5em;
+}
+
+.container .info .head h1 span {
+    color: hsl(277, 100%, 50%);
+}
+
+.container .info .body p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: Lexend_Deca;
+}
+
+.container .info .foot {
+    display: flex;
+    color: aliceblue;
+    margin-top: 15%;
+}
+
+.container .info .foot .span {
+    margin-right: 20px;
+}
+
+.container .info .foot .span p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container .info .foot .span span {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 13px;
+}
+
+
+@media (max-width:625px) {
+    .container {
+        width: 90%;
+        height: 90vh;
+        display: block;
+    }
+
+    .container .image {
+        width: 100%;
+        min-height: 40%;
+    }
+
+    .container .info {
+        width: 100%;
+        min-height: 60%;
+        text-align: center;
+    }
+
+    .container .info .foot {
+        display: block;
+    }
+
+    .container .info .foot .span {
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+
+}
